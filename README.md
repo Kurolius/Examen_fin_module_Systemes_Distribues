@@ -21,3 +21,37 @@ des micro-services fonctionnels suivants :
 ## Déployer le serveur AXON Server
 
 ![image](https://user-images.githubusercontent.com/84138772/209530570-c4fc3344-b086-44cc-b93a-be62bef8a652.png)
+
+
+## Gatway Service
+
+![image](https://user-images.githubusercontent.com/84138772/209532150-13f77c1a-c3cf-4cb5-a683-a19deec829f0.png)
+
+### Config
+
+```
+server.port=9999
+spring.application.name=GATEWAY-SERVICE
+spring.cloud.discovery.enabled=true
+eureka.instance.prefer-ip-address=true
+
+```
+
+## Discovery Service
+
+![image](https://user-images.githubusercontent.com/84138772/209532389-f48dca5c-5c80-440e-9c17-e071e2bdeed9.png)
+
+### config 
+
+```
+server.port=8761
+# dont register server itself as a client.
+eureka.client.fetch-registry=false
+# Does not register itself in the service registry.
+eureka.client.register-with-eureka=false
+
+```
+
+### Web Portal 
+
+![image](https://user-images.githubusercontent.com/84138772/209532496-7ad0df9b-c414-41e4-8cb2-f7d75a7d0d85.png)
