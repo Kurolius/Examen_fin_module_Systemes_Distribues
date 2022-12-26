@@ -4,6 +4,7 @@ class GetAllCustomerQuery();
 data class CustomerById(
     val customerId:String,
 );
+class SubscribeToEventsQuery();
 
 class GetAllProductQuery();
 data class ProductById(

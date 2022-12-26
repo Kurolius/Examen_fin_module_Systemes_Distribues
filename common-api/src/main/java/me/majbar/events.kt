@@ -6,7 +6,7 @@ abstract class BaseEvent<T> (
 data class CustomerCreatedEvent(
     override val id : String,
     val payload:CustomerDTO
-):BaseEvent<String>(id);
+):BaseCommand<String>(id);
 
 data class CustomerModifiedEvent(
     override val id : String,

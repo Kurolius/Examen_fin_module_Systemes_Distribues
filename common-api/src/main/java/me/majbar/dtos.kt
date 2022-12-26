@@ -9,7 +9,18 @@ data class CustomerDTO(
     var email : String="",
     var phone : String="",
     );
+data class EventDataResponseDTO<T>(
+    var type : String="",
+    var eventData : T ,
+);
 
+data class EditCustomerDTO(
+    var customerId : String ="",
+    var name : String="",
+    var address : String="",
+    var email : String="",
+    var phone : String="",
+);
 data class ProductDTO(
     var productId : String ="",
     var name : String="",
@@ -29,6 +40,7 @@ data class OrderDTO(
     var orderDate : Instant = Instant.now(),
     var deliveryDate : Instant = Instant.now()
     );
+
 
 data class OrderLineDTO(
     var orderLineId : String ="",
